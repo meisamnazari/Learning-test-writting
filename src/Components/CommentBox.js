@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {save_comment} from './../actions'
+import {save_comment} from './../actions';
+import commentBox from './styles/commentBox.css';
 
 class CommentBox extends Component {
 
@@ -21,6 +22,7 @@ class CommentBox extends Component {
             <form onSubmit={this.handleSubmit}>
                 <h4>Add a Comment</h4>
                 <textarea
+                    className='textInput'
                     value={this.state.comment}
                     onChange={this.handleChange}
                 />
@@ -31,6 +33,7 @@ class CommentBox extends Component {
         );
     }
 }
+
 
 const mapStateToProps=(state)=>{
         return{
